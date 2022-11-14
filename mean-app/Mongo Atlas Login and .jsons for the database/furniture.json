@@ -1,0 +1,91 @@
+[{
+  "_id": {
+    "$oid": "60892f6c82e5cf4bb0681821"
+  },
+  "name": "KIVIK",
+  "main_material": "leather",
+  "colour": "dark brown",
+  "type": "chair",
+  "area": "living room",
+  "index": "000001"
+},{
+  "_id": {
+    "$oid": "60892f6c82e5cf4bb0681822"
+  },
+  "name": "LIDHULT",
+  "main_material": "wood",
+  "colour": "dark brown",
+  "type": "cabinet",
+  "area": "kitchen",
+  "index": "000002"
+},{
+  "_id": {
+    "$oid": "60892f6c82e5cf4bb0681823"
+  },
+  "name": "VIMLE",
+  "main_material": "marble",
+  "colour": "off white",
+  "type": "island",
+  "area": "kitchen",
+  "index": "000003"
+},{
+  "_id": {
+    "$oid": "60892f6c82e5cf4bb0681824"
+  },
+  "name": "LANDSKRONA",
+  "main_material": "wood",
+  "colour": "birch white",
+  "type": "bedframe",
+  "area": "bedroom",
+  "index": "000004"
+},{
+  "_id": {
+    "$oid": "60892f6c82e5cf4bb0681825"
+  },
+  "name": "KLIPPAN",
+  "main_material": "wood",
+  "colour": "mate black",
+  "type": "chair",
+  "area": "living room",
+  "index": "000005"
+},{
+  "_id": {
+    "$oid": "60892f6c82e5cf4bb0681826"
+  },
+  "name": "BYGGET",
+  "main_material": "metal",
+  "colour": "metallic silver",
+  "type": "coathanger",
+  "area": "hallway",
+  "index": "000006"
+},{
+  "_id": {
+    "$oid": "60892f6c82e5cf4bb0681827"
+  },
+  "name": "SKURUP",
+  "main_material": "leather",
+  "colour": "red",
+  "type": "stool",
+  "area": "living room",
+  "index": "000007"
+},{
+  "_id": {
+    "$oid": "60892f6c82e5cf4bb0681828"
+  },
+  "name": "SUNNEBY",
+  "main_material": "cotton",
+  "colour": "off white",
+  "type": "blanket",
+  "area": "bedroom",
+  "index": "000008"
+},{
+  "_id": {
+    "$oid": "60892f6c82e5cf4bb0681829"
+  },
+  "name": "TUTEMO",
+  "main_material": "metal",
+  "colour": "metallic silver",
+  "type": "knives",
+  "area": "kitchen",
+  "index": "000009"
+}]

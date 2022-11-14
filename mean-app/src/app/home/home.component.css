@@ -1,0 +1,12 @@
+main {
+  margin-top: 2rem; /*1rem = 16px*/
+  width: 60%;
+  margin: auto;
+  margin: 4rem auto;
+}
+div{
+  text-align: left;
+  font-size: large;
+  margin: auto;
+  margin-top: 2rem;
+}

@@ -1,0 +1,93 @@
+<mat-card>
+  <div>
+    <p>
+        Below is a table filled with furniture that is already in the database.
+    <br>You can also find a filter option to better navigate the table</p>
+  </div>
+  <mat-form-field>
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. white" #input>
+  </mat-form-field>
+
+  <table mat-table matSort class="mat-elevation-z8" [dataSource]="dataSource">
+
+    <ng-container matColumnDef="index">
+      <th mat-header-cell *matHeaderCellDef> Index </th>
+      <td mat-cell *matCellDef="let furniture"> {{furniture.index}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let furniture"> {{furniture.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="main_material">
+      <th mat-header-cell *matHeaderCellDef> Main Material </th>
+      <td mat-cell *matCellDef="let furniture"> {{furniture.main_material}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="colour">
+      <th mat-header-cell *matHeaderCellDef> Colour </th>
+      <td mat-cell *matCellDef="let furniture"> {{furniture.colour}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="type">
+      <th mat-header-cell *matHeaderCellDef> Type </th>
+      <td mat-cell *matCellDef="let furniture"> {{furniture.type}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="area">
+      <th mat-header-cell *matHeaderCellDef> Area </th>
+      <td mat-cell *matCellDef="let furniture"> {{furniture.area}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+</mat-card>
+<br>
+<mat-card>
+  <div>
+    <p>
+      Here you can enter the data about a new piece of furniture, but you can also delete a piece based on the index.
+    </p>
+  </div>
+  <form (submit)="onCreateFurniture(furnitureCreation)" #furnitureCreation="ngForm">
+    <mat-form-field>
+      <input matInput type="text" name="index" ngModel placeholder="Enter the index number.."
+      #index = "ngModel" id="index" required minlength="1">
+      <mat-error *ngIf="index.invalid">Please enter a valid index</mat-error>
+    </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput #name="ngModel" name="name" type="text" ngModel placeholder="Enter the name.." required minlength="1" id="name">
+    <mat-error *ngIf="name.invalid">Please enter a valid name</mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput #main_material="ngModel" name="main_material" type="text" ngModel placeholder="Enter main material..." required minlength="1" id="main_material">
+    <mat-error *ngIf="main_material.invalid">Please enter a valid material</mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput #colour="ngModel" name="colour" type="text" ngModel placeholder="Enter colour..." required minlength="1" id="colour">
+    <mat-error *ngIf="colour.invalid">Please enter a valid colour</mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput #type="ngModel" name="type" type="text" ngModel placeholder="Enter type... " required minlength="1" id="type">
+    <mat-error *ngIf="type.invalid">Please enter a valid type of furniture</mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput #area="ngModel" name="area" type="text" ngModel placeholder="Enter area..." required minlength="1" id="area">
+    <mat-error *ngIf="area.invalid">Please enter a valid area for furniture</mat-error>
+  </mat-form-field>
+  <br>
+  <button mat-raised-button type="submit" [disabled]="furnitureCreation.invalid" (click)="onCreateFurniture(furnitureCreation)">Create furniture</button>
+  <button mat-raised-button type="reset">Reset form</button>
+  <button mat-raised-button color="warn" (click)="onDelete(furnitureCreation.index)">Delete furniture</button>
+
+  </form>
+</mat-card>

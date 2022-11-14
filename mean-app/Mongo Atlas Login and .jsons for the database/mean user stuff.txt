@@ -1,0 +1,6 @@
+username: meanUser01
+password:kQTVOKddzs5FQvtU
+
+access is from anywhere: 0.0.0.0/0
+
+connection string: mongo "mongodb+srv://cluster0.oymn3.mongodb.net/myFirstDatabase" --username meanUser01

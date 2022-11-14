@@ -1,0 +1,11 @@
+
+mat-form-field,
+textarea {
+  width: 35%;
+}
+div{
+  text-align: left;
+  font-size: large;
+  margin: auto;
+  margin-top: 2rem;
+}

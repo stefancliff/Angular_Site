@@ -1,0 +1,49 @@
+<mat-card>
+  <div>
+    <p>
+        On this form you register as a new user which is sent into the database.
+    <br>You can also delete a user based on their index, so you enter an index you want to delete and press the delete button.</p>
+  </div>
+  <form (submit)="onCreateUser(userCreation)" #userCreation="ngForm">
+    <mat-form-field>
+      <input matInput type="text" name="fname"
+       required minlength="1" ngModel placeholder="Enter your first name.."
+       #fname ="ngModel" id="fname">
+       <mat-error *ngIf="fname.invalid">Please enter your first name</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput type="text" name="lname"
+       required minlength="1" ngModel
+       placeholder="Enter your last name.."
+       #lname ="ngModel" id="lname">
+       <mat-error *ngIf="lname.invalid">Please enter your last name</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput type="email" name="email"
+       required minlength="1" ngModel placeholder="Enter your email.."
+       #email ="ngModel" id="email">
+       <mat-error *ngIf="email.invalid">Please enter your email</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput type="password" name="password"
+       required minlength="8" ngModel placeholder="Enter your password.."
+       #password ="ngModel">
+       <mat-error *ngIf="password.invalid">Please enter your password</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput type="text" name="index"
+       required minlength="1" ngModel placeholder="Enter your index.."
+       #index ="ngModel">
+       <mat-error *ngIf="index.invalid">Please enter your index</mat-error>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button type="submit" [disabled]="userCreation.invalid" (click)="onCreateUser(userCreation)">Create user</button>
+    <button mat-raised-button type="reset">Reset form</button>
+    <button mat-raised-button color="warn" (click)="onDelete(userCreation.index)">Delete user</button>
+  </form>
+
+</mat-card>

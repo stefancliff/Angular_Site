@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "608991627fb3586184bc17cc"
+  },
+  "fname": "Stefan",
+  "lname": "Cliff",
+  "email": "stefan.cliff.19@singimail.rs",
+  "password": "Stefan12345",
+  "index": "000001"
+},{
+  "_id": {
+    "$oid": "608991627fb3586184bc17cd"
+  },
+  "fname": "Pera",
+  "lname": "Peric",
+  "email": "peraperic@gmail.com",
+  "password": "Pera12345",
+  "index": "000002"
+},{
+  "_id": {
+    "$oid": "608991627fb3586184bc17ce"
+  },
+  "fname": "Jovan",
+  "lname": "Jovanovic",
+  "email": "jovanjovanovic@gmail.com",
+  "password": "Jovan12345",
+  "index": "000003"
+}]
